@@ -1,0 +1,819 @@
+Filename:MORPION
+Lbl 1Ù
+ViewWindow 1,127,0,1,63,0Ù
+CoordOffÙ
+GridOffÙ
+AxesOffÙ
+LabelOffÙ
+0ãA~ZÙ
+F-Line 10,60,110,60Ù
+F-Line 10,4,110,4Ù
+F-Line 10,60,10,4Ù
+F-Line 110,60,110,4Ù
+F-Line 10,52,110,52Ù
+F-Line 10,12,110,12Ù
+Text 6,20,"JEU DU MORPION"Ù
+Text 15,20,"F1.MODE SOLO"Ù
+Text 21,20,"F2.MODE DUO"Ù
+Text 27,20,"F3.INSTRUCTIONS"Ù
+Text 33,20,"F4.CREDITS DU JEU"Ù
+Text 39,20,"F5.STATISTIQUES"Ù
+Text 45,20,"F6.PARAMETRES"Ù
+Text 54,20,"QUITTER #E69B"Ù
+DoÙ
+GetkeyãAÙ
+A=79×1ãSÙ
+A=69×1ãSÙ
+A=59×1ãSÙ
+A=49×1ãSÙ
+A=39×1ãSÙ
+A=29×1ãSÙ
+A=27×1ãSÙ
+LpWhile SÈ1Ù
+ClsÙ
+If A=59Ù
+Then Ù
+Text 1,1,"* SELECTIONNER F1.MODE SOLO."Ù
+Text 7,1,"CHOISIR L'EMPLACEMENT DE JEU:"Ù
+Text 13,1,"LES TOUCHES 1,2,3,4,5,6,7,8,9."Ù
+Text 19,1,"ATTENDRE VOTRE TOUR."Ù
+Text 28,1,"* SELECTIONNER F2.MODE DUO."Ù
+Text 34,1,"CHANGEMENT DES JOUEURS 1 ET 2"Ù
+Text 40,1,"AUTOMATIQUE. CHOISIR L'EMPLA-"Ù
+Text 46,1,"CEMENT: 1,2,3,4,5,6,4,8,9"Ù
+Text 55,1,"RETOUR AU MENU #E69B"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+ClsÙ
+A=27×Goto 1Ù
+IfEndÙ
+If A=49Ù
+Then Ù
+F-Line 5,60,125,60Ù
+F-Line 5,10,125,10Ù
+F-Line 5,60,5,10Ù
+F-Line 125,60,125,10Ù
+Text 13,10,"LANGAGE BASIC CASIO"Ù
+Text 19,10,"@E743@E76F@E76E@E763@E765@E770@E774@E769@E76F@E76E @E74D@E761@E778@E769@E76D@E765 @E756@E769@E76E@E763@E765@E76E@E774"Ù
+Text 25,10,"LE 2 JUIN 2018"Ù
+Text 31,10,"VERSION 1.5"Ù
+Text 43,10,"RETOUR AU MENU #E69B"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+ClsÙ
+A=27×Goto 1Ù
+IfEndÙ
+If A=39Ù
+Then Ù
+F-Line 5,60,125,60Ù
+F-Line 5,10,125,10Ù
+F-Line 5,60,5,10Ù
+F-Line 125,60,125,10Ù
+Text 7,10,"NOMBRE DE PARTIES GAGNEES:"Ù
+Text 19,10,"* MODE SOLO:"Ù
+Text 19,65,List 4[1]Ù
+Text 25,10,"* MODE DUO:"Ù
+Text 25,60,"J1:"Ù
+Text 25,82,"J2:"Ù
+Text 25,73,List 4[2]Ù
+Text 25,95,List 4[3]Ù
+Text 35,10,"DEL.REINITIALISER"Ù
+Text 42,10,"RETOUR AU MENU #E69B"Ù
+DoÙ
+GetkeyãAÙ
+A=27×2ãSÙ
+A=44×2ãSÙ
+LpWhile SÈ2Ù
+ClsÙ
+A=27×Goto 1Ù
+If A=44Ù
+Then Ù
+3ãDim List 4Ù
+Goto 1Ù
+IfEndÙ
+IfEndÙ
+If A=29Ù
+Then Ù
+F-Line 5,60,125,60Ù
+F-Line 5,10,125,10Ù
+F-Line 5,60,5,10Ù
+F-Line 125,60,125,10Ù
+Text 7,10,"EN CAS DE MESSAGE D'ERREUR:"Ù
+Text 13,10,"DEL.REINITIALISER"Ù
+Text 19,10,"MODE SOLO:"Ù
+Text 25,10,"1.FACILE"Ù
+Text 31,10,"2.DIFFICILE"Ù
+Text 42,10,"RETOUR AU MENU #E69B"Ù
+DoÙ
+GetkeyãAÙ
+A=72×2ãSÙ
+A=62×2ãSÙ
+A=44×2ãSÙ
+A=27×2ãSÙ
+LpWhile SÈ2Ù
+ClsÙ
+A=27×Goto 1Ù
+If A=44Ù
+Then Ù
+{0}ãList 5Ù
+{0,0,0}ãList 4Ù
+Goto 1Ù
+IfEndÙ
+If A=72Ù
+Then Ù
+{0}ãList 5Ù
+Goto 1Ù
+IfEndÙ
+If A=62Ù
+Then Ù
+{1}ãList 5Ù
+Goto 1Ù
+IfEndÙ
+IfEndÙ
+If A=27Ù
+Then Ù
+Prog " RESET"Ù
+StopÙ
+IfEndÙ
+Text 1,33,"JEU DU MORPION"Ù
+Text 57,1,"RETOUR AU MENU #E69B"Ù
+Horizontal 57Ù
+Horizontal 13Ù
+F-Line 40,50,70,50Ù
+F-Line 40,20,70,20Ù
+F-Line 40,50,40,20Ù
+F-Line 70,50,70,20Ù
+F-Line 40,40,70,40Ù
+F-Line 40,30,70,30Ù
+F-Line 50,50,50,20Ù
+F-Line 60,50,60,20Ù
+F-Line 2,50,38,50Ù
+F-Line 2,20,38,20Ù
+F-Line 2,50,2,20Ù
+F-Line 38,50,38,20Ù
+F-Line 72,50,125,50Ù
+F-Line 72,20,125,20Ù
+F-Line 72,50,72,20Ù
+F-Line 125,50,125,20Ù
+9ãNÙ
+9ãDim List 1Ù
+5ãDim List 2Ù
+4ãDim List 3Ù
+24ãDim List 6Ù
+DoÙ
+0ãJÙ
+0ãRÙ
+N=9×1ãTÙ
+N=8×0ãTÙ
+N=7×1ãTÙ
+N=6×0ãTÙ
+N=5×1ãTÙ
+N=4×0ãTÙ
+N=3×1ãTÙ
+N=2×0ãTÙ
+N=1×1ãTÙ
+N=0×10ãRÙ
+If A=79 Or A=69Ù
+Then Ù
+A=79×1ãFÙ
+A=69×2ãFÙ
+Text 20,5,"TOURS :"Ù
+Text 30,5,"RESTE"Ù
+Text 30,28,NÙ
+T=1×Text 26,79,"           "Ù
+If A=79Ù
+Then Ù
+T=1×Text 26,79,"VOTRE TOUR"Ù
+T=0×Text 26,79,"ORDINATEUR"Ù
+IfEndÙ
+If A=69Ù
+Then Ù
+T=1×Text 26,83,"JOUEUR 1"Ù
+T=0×Text 26,83,"JOUEUR 2"Ù
+IfEndÙ
+Lbl 0Ù
+DoÙ
+T=1×GetkeyãJÙ
+J=72×1ãRÙ
+J=62×2ãRÙ
+J=52×3ãRÙ
+J=73×4ãRÙ
+J=63×5ãRÙ
+J=53×6ãRÙ
+J=74×7ãRÙ
+J=64×8ãRÙ
+J=54×9ãRÙ
+J=27×11ãRÙ
+If A=79Ù
+Then Ù
+If T=0 And List 5[1]=0Ù
+Then Ù
+Int 9Ran#+1ãRÙ
+IfEndÙ
+If T=0 And List 5[1]=1Ù
+Then Ù
+0ãXÙ
+0ãYÙ
+If List 6[1]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=2×Y+1ãYÙ
+Y=2×3ãRÙ
+Y=2×1ãList 6[1]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[2]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=3×Y+1ãYÙ
+Y=2×2ãRÙ
+Y=2×1ãList 6[2]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[3]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=2×Y+1ãYÙ
+List 2[X]=3×Y+1ãYÙ
+Y=2×1ãRÙ
+Y=2×1ãList 6[3]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[4]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=6×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×3ãRÙ
+Y=2×1ãList 6[4]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[5]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×6ãRÙ
+Y=2×1ãList 6[5]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[6]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=6×Y+1ãYÙ
+Y=2×9ãRÙ
+Y=2×1ãList 6[6]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[7]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=4×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+Y=2×1ãRÙ
+Y=2×1ãList 6[7]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[8]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+Y=2×4ãRÙ
+Y=2×1ãList 6[8]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[9]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=4×Y+1ãYÙ
+Y=2×7ãRÙ
+Y=2×1ãList 6[9]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[10]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=7×Y+1ãYÙ
+List 2[X]=8×Y+1ãYÙ
+Y=2×9ãRÙ
+Y=2×1ãList 6[10]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[11]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=7×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×8ãRÙ
+Y=2×1ãList 6[11]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[12]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=8×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×7ãRÙ
+Y=0×1ãList 6[12]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[13]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+Y=2×3ãRÙ
+Y=2×1ãList 6[13]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[14]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+Y=2×5ãRÙ
+Y=2×1ãList 6[14]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[15]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+Y=2×7ãRÙ
+Y=2×1ãList 6[15]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[16]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×1ãRÙ
+Y=2×1ãList 6[16]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[17]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+Y=2×5ãRÙ
+Y=2×1ãList 6[17]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[18]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+Y=2×9ãRÙ
+Y=2×1ãList 6[18]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[19]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=8×Y+1ãYÙ
+Y=2×2ãRÙ
+Y=2×1ãList 6[19]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[20]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=2×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+Y=2×8ãRÙ
+Y=2×1ãList 6[20]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[21]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=2×Y+1ãYÙ
+List 2[X]=8×Y+1ãYÙ
+Y=2×5ãRÙ
+Y=2×1ãList 6[21]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[22]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=4×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+Y=2×6ãRÙ
+Y=2×1ãList 6[22]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[23]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=4×Y+1ãYÙ
+List 2[X]=6×Y+1ãYÙ
+Y=2×5ãRÙ
+Y=2×1ãList 6[23]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+If List 6[24]=0Ù
+Then Ù
+For 1ãX To 5 Step 1Ù
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=6×Y+1ãYÙ
+Y=2×4ãRÙ
+Y=2×1ãList 6[24]Ù
+NextÙ
+IfEndÙ
+0ãXÙ
+0ãYÙ
+R=0×Int 9Ran#+1ãRÙ
+IfEndÙ
+IfEndÙ
+If A=69Ù
+Then Ù
+T=0×GetkeyãJÙ
+IfEndÙ
+LpWhile R=0Ù
+If N=9 Or N=7 Or N=5 Or N=3 Or N=1Ù
+Then Ù
+N=9×RãList 2[1]Ù
+N=7×RãList 2[2]Ù
+N=5×RãList 2[3]Ù
+N=3×RãList 2[4]Ù
+N=1×RãList 2[5]Ù
+IfEndÙ
+If N=8 Or N=6 Or N=4 Or N=2Ù
+Then Ù
+N=8×RãList 3[1]Ù
+N=6×RãList 3[2]Ù
+N=4×RãList 3[3]Ù
+N=2×RãList 3[4]Ù
+IfEndÙ
+If NÈ0Ù
+Then Ù
+RãList 1[N]Ù
+IfEndÙ
+For 1ãX To 9 Step 1Ù
+0ãYÙ
+List 1[X]ãYÙ
+N=X×0ãYÙ
+If Y=RÙ
+Then Ù
+0ãRÙ
+0ãList 1[N]Ù
+Goto 0Ù
+IfEndÙ
+NextÙ
+IfEndÙ
+If T=1Ù
+Then Ù
+R=1×Circle 45,25,4Ù
+R=2×Circle 55,25,4Ù
+R=3×Circle 65,25,4Ù
+R=4×Circle 45,35,4Ù
+R=5×Circle 55,35,4Ù
+R=6×Circle 65,35,4Ù
+R=7×Circle 45,45,4Ù
+R=8×Circle 55,45,4Ù
+R=9×Circle 65,45,4Ù
+IfEndÙ
+If T=0Ù
+Then Ù
+R=1×F-Line 40,30,50,20Ù
+R=1×F-Line 40,20,50,30Ù
+R=2×F-Line 50,30,60,20Ù
+R=2×F-Line 50,20,60,30Ù
+R=3×F-Line 60,30,70,20Ù
+R=3×F-Line 60,20,70,30Ù
+R=4×F-Line 40,40,50,30Ù
+R=4×F-Line 40,30,50,40Ù
+R=5×F-Line 50,40,60,30Ù
+R=5×F-Line 50,30,60,40Ù
+R=6×F-Line 60,40,70,30Ù
+R=6×F-Line 60,30,70,40Ù
+R=7×F-Line 40,50,50,40Ù
+R=7×F-Line 40,40,50,50Ù
+R=8×F-Line 50,50,60,40Ù
+R=8×F-Line 50,40,60,50Ù
+R=9×F-Line 60,50,70,40Ù
+R=9×F-Line 60,40,70,50Ù
+IfEndÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=2×Y+1ãYÙ
+List 2[X]=3×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=1×Y+1ãYÙ
+List 3[X]=2×Y+1ãYÙ
+List 3[X]=3×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=7×Y+1ãYÙ
+List 2[X]=8×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=7×Y+1ãYÙ
+List 3[X]=8×Y+1ãYÙ
+List 3[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=4×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=1×Y+1ãYÙ
+List 3[X]=4×Y+1ãYÙ
+List 3[X]=7×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=6×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=3×Y+1ãYÙ
+List 3[X]=6×Y+1ãYÙ
+List 3[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=2×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=8×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=2×Y+1ãYÙ
+List 3[X]=5×Y+1ãYÙ
+List 3[X]=8×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=1×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=1×Y+1ãYÙ
+List 3[X]=5×Y+1ãYÙ
+List 3[X]=9×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=3×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=7×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=3×Y+1ãYÙ
+List 3[X]=5×Y+1ãYÙ
+List 3[X]=7×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 5 Step 1Ù
+List 2[X]=4×Y+1ãYÙ
+List 2[X]=5×Y+1ãYÙ
+List 2[X]=6×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+1ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+For 1ãX To 4 Step 1Ù
+List 3[X]=4×Y+1ãYÙ
+List 3[X]=5×Y+1ãYÙ
+List 3[X]=6×Y+1ãYÙ
+If Y=3Ù
+Then Ù
+2ãVÙ
+11ãRÙ
+IfEndÙ
+NextÙ
+0ãXÙ
+0ãYÙ
+If N=0Ù
+Then Ù
+11ãRÙ
+0ãVÙ
+IfEndÙ
+If NÈ0Ù
+Then Ù
+N-1ãNÙ
+IfEndÙ
+LpWhile RÈ11Ù
+If V=1 And F=1Ù
+Then Ù
+List 4[1]+1ãList 4[1]Ù
+N=1×0ãNÙ
+Text 30,28,NÙ
+Text 26,79,"           "Ù
+Text 19,76,"BRAVO VOUS"Ù
+Text 29,76,"AVEZ GAGNE ·!·"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+A=27×Goto 1Ù
+IfEndÙ
+If V=2 And F=1Ù
+Then Ù
+Text 26,79,"           "Ù
+Text 19,76,"MINCE VOUS"Ù
+Text 29,76,"AVEZ PERDU ·!·"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+A=27×Goto 1Ù
+IfEndÙ
+If V=1 And F=2Ù
+Then Ù
+List 4[2]+1ãList 4[2]Ù
+N=1×0ãNÙ
+Text 30,28,NÙ
+Text 26,79,"           "Ù
+Text 19,76,"LE JOUEUR 1"Ù
+Text 29,76,"A GAGNE ·!·"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+A=27×Goto 1Ù
+IfEndÙ
+If V=2 And F=2Ù
+Then Ù
+List 4[3]+1ãList 4[3]Ù
+Text 26,79,"           "Ù
+Text 19,76,"LE JOUEUR 2"Ù
+Text 29,76,"A GAGNE ·!·"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+A=27×Goto 1Ù
+IfEndÙ
+If N=0 And V=0Ù
+Then Ù
+Text 26,79,"          "Ù
+Text 25,85,"AUCUN"Ù
+Text 31,80,"GAGNANT ·!·"Ù
+DoÙ
+GetkeyãAÙ
+LpWhile AÈ27Ù
+A=27×Goto 1Ù
+IfEndÙ
+If R=11 And V=0Ù
+Then Ù
+Goto 1Ù
+IfEndÙ
